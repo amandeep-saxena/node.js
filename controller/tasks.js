@@ -64,10 +64,10 @@ const updateTask = async (req, res) => {
             return res.status(404).json({ msg: 'no task with id  : ${taskId}' })
         }
 
-        res.status(201).json({ app });
+        return res.status(201).json({ app });
 
     } catch (error) {
-        res.status(500).json({ msg: error })
+        return res.status(500).json({ msg: error })
     }
 
 }
